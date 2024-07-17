@@ -158,6 +158,11 @@ Widget bodyParts(BuildContext context) {
               name: "Glass Water",
               description:
                   "It requires bright, indirect light and consistent watering. This plant is perfect for adding a touch of greenery to any room."),
+          Product(
+              image: Urls.product2,
+              name: "Glass Water",
+              description:
+                  "It requires bright, indirect light and consistent watering. This plant is perfect for adding a touch of greenery to any room."),
         ],
       ),
     ),
