@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:plantapp/Screens/homepage.dart';
+import 'package:plantapp/widget/productdetails.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: ProductDetails(),
     );
   }
 }
