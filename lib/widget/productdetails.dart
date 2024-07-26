@@ -12,6 +12,7 @@ class ProductDetails extends StatelessWidget {
       backgroundColor: Colors.red,
       body: Stack(
         children: [
+          bottomValue(context),
           Positioned(
             child: Container(
               height: MediaQuery.of(context).size.height * 0.85,
@@ -135,15 +136,87 @@ class ProductDetails extends StatelessWidget {
                 "\$45",
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.w800),
               )),
-          const Positioned(
-              top: 350,
+          Positioned(
+              // top: 350,
               right: 32,
-              child: Text(
-                "\$45",
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.w800),
+              bottom: 170,
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(200),
+                  color: AppColors.secondaryColor,
+                ),
+                padding: const EdgeInsets.only(
+                    left: 10, right: 10, top: 5, bottom: 5),
+                child: const Text(
+                  "add to cart",
+                  style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      color: AppColors.white),
+                ),
               )),
         ],
       ),
     );
   }
+}
+
+Widget bottomValue(BuildContext context) {
+  return Container(
+    height: MediaQuery.of(context).size.height,
+    width: MediaQuery.of(context).size.width,
+    padding: const EdgeInsets.only(bottom: 10, left: 18, right: 18),
+    color: AppColors.secondaryColor,
+    child: const Stack(
+      children: [
+        Positioned(
+          bottom: 30,
+          left: 0,
+          right: 0,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Height",
+                    style: TextStyle(fontSize: 16, color: AppColors.white),
+                  ),
+                  Text(
+                    "40cm-50cm",
+                    style: TextStyle(fontSize: 10, color: AppColors.white),
+                  ),
+                ],
+              ),
+              Column(
+                children: [
+                  Text(
+                    "POT",
+                    style: TextStyle(fontSize: 16, color: AppColors.white),
+                  ),
+                  Text(
+                    "Self Watering Pot",
+                    style: TextStyle(fontSize: 10, color: AppColors.white),
+                  ),
+                ],
+              ),
+              Column(
+                children: [
+                  Text(
+                    "Temperature",
+                    style: TextStyle(fontSize: 16, color: AppColors.white),
+                  ),
+                  Text(
+                    "18C-25C",
+                    style: TextStyle(fontSize: 10, color: AppColors.white),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ],
+    ),
+  );
 }
