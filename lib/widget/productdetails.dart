@@ -152,7 +152,7 @@ class Products extends StatelessWidget {
         Positioned(
             // top: 350,
             right: 32,
-            bottom: 170,
+            bottom: 60,
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(200),
